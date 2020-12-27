@@ -1,0 +1,42 @@
+{
+  "name": "Jojo commands",
+  "version": "1.0.1",
+  "description": "Bot de commandes jojo",
+  "main": "index.js",
+  "bake": {
+    "description": "Scaffold a basic ES6 setup",
+    "scripts": {
+      "start": "echo Starting generation of default template",
+      "prestart": "echo prestart",
+      "poststart": "echo poststart",
+      "install": "npm install --loglevel warn --cache-min Infinity",
+      "preinstall": "echo Installing dependencies ...",
+      "postinstall": "npm ls --depth 0"
+    }
+  },
+  "private": true,
+  "author": "ezzud",
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.7.x"
+  },
+  "dependencies": {
+    "better-sqlite3": "^7.1.1",
+    "canvas": "^2.6.1",
+    "discord.js": "^12.5.1",
+    "discord.js-commando": "^0.10.0",
+    "edit-json-file": "^1.4.0",
+    "ffmpeg-static": "^4.2.7",
+    "fs": "0.0.1-security",
+    "lowdb": "^1.0.0",
+    "moment": "^2.24.0",
+    "node-opus": "^0.3.3",
+    "opusscript": "0.0.7",
+    "path": "^0.12.7",
+    "quick.db": "^7.1.3",
+    "sqlite3": "^5.0.0"
+  },
+  "optionalDependencies": {
+    "@discordjs/uws": "^11.149.1"
+  }
+}
