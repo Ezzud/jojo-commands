@@ -1,4 +1,8 @@
 const Discord = require('discord.js');
+const sugg = new Set();
+const rrdelay = new Set();
+const roulette = new Set();
+const roulettepp = new Set()
 const editJsonFile = require('edit-json-file')
 const config = editJsonFile('./config.json')
 const sleep = (milliseconds) => {
@@ -7,14 +11,12 @@ const sleep = (milliseconds) => {
 const fs = require('fs')
 const moment = require('moment');
 const storage = require('quick.db');
-const img = new storage.table('imgInfos');
 const db = new storage.table('userInfos');
 const client = new Discord.Client({
     partials: ['MESSAGE', 'REACTION']
 });
 
 client.db = db
-client.img = img
 var util = require('util');
 launch().then(console.log(`\x1b[0m[Statut]` + ` \x1b[32m ON` + `\x1b[0m`));
 async function launch() {
@@ -66,6 +68,7 @@ function _eventHandler() {
 
 client.login(config.get('token'));
 console.log(`Connexion à l'API discord.js en cours...`);
+
 
 client.on('invalidated', async => {
     client.destroy().then(() => {

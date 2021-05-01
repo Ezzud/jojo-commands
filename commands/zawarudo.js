@@ -21,7 +21,7 @@ module.exports.run = async (client, message, args) => {
     message.channel.send(embed)
     var user = message.guild.member(message.author).voice.channel.members
     await ch.join().then(async connection => {
-            await connection.play('./img/start.mp3');
+            await connection.play('./files/start.mp3');
             await sleep(3500)
     user.forEach(async user => {
     	if(user.id === message.author.id || user.id === "787093743912091668") return(console.log('Not Mutable'));
@@ -32,7 +32,7 @@ module.exports.run = async (client, message, args) => {
         })
     })
     await sleep(11000)
-    await connection.play('./img/end.mp3');
+    await connection.play('./files/end.mp3');
     await sleep(1000)
     await user.forEach(async user => {
     	if(user.id === message.author.id || user.id === "787093743912091668") return(console.log('Not Mutable'));

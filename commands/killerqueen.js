@@ -36,7 +36,7 @@ module.exports.run = async (client, message, args) => {
 })
     }
     await ch.join().then(async connection => {
-            await connection.play('./img/killerqueen.mp3', {volume: 0.60});
+            await connection.play('./files/killerqueen.mp3', {volume: 0.60});
             await sleep(5000)
     }).catch(async (err) => {
             console.error(err)

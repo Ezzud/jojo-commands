@@ -2,6 +2,9 @@
 const Discord = require("discord.js");
 const db = require('quick.db');
 const fs = require('fs')
+const path = require('path')
+const wavConverter = require('wav-converter')
+
    function sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
    }
@@ -27,7 +30,7 @@ module.exports.run = async (client, message, args) => {
 			mode: 'pcm',
 			end: 'manual'
 		});
-		const writeStream = fs.createWriteStream(`./${message.author.id}.raw_pcm`);
+		const writeStream = await fs.createWriteStream(`./${message.author.id}.raw_pcm`);
 		voiceStream.pipe(writeStream);
 		voiceStream.on('close', () => {
 			writeStream.end(err => {
@@ -43,7 +46,7 @@ module.exports.run = async (client, message, args) => {
 		await writeStream.end();
 		await sleep(1000)
 		console.log('Playing')
-		await connection.play(`./${message.author.id}.raw_pcm`)
+		await connection.play(`./${message.author.id}.raw_pcm`, { type: 'unknown' })
 		await sleep(4000)
             console.log("sENDED")
         }).catch(async (err) => {

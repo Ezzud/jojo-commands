@@ -21,7 +21,7 @@ module.exports.run = async (client, message, args) => {
     message.channel.send(embed)
     var user = message.guild.member(message.author).voice.channel.members
     await ch.join().then(async connection => {
-            await connection.play('./img/cream.mp3');
+            await connection.play('./files/cream.mp3');
             await sleep(4000)
     await ch.delete()
     await db.set(`${message.guild.id}-guild.command`, false)

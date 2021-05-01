@@ -32,9 +32,9 @@ module.exports.run = async (client, message, args) => {
 
     })
     await ch.join().then(async connection => {
-            await connection.play('./img/crazydiamond.mp3');
+            await connection.play('./files/crazydiamond.mp3');
             await sleep(3000)
-            await connection.play('./img/dora.mp3');
+            await connection.play('./files/dora.mp3');
     await list.forEach(async user => {
     	if(user.id === message.author.id || user.id === client.user.id) return(console.log('Not Mutable'));
     	await user.voice.setChannel(ch)

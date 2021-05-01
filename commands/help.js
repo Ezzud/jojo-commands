@@ -8,7 +8,6 @@ module.exports.run = async (client, message, args) => {
 			.setDescription('Renseignez-vous sur les commandes du bot')
 			.setColor('#6DC61E')
 			.addField(`:loud_sound: Commande en vocal`, `\`jojo!zawarudo\` - Mute tout les membres d'un vocal pendant 10 secondes\n\`jojo!zahando\` - Déconnecter tout les utilisateurs d'un vocal\n\`jojo!zahandomuted\` - Déconnecter tout les utilisateurs muets en vocal\n\`jojo!cream\` - Supprimer le salon vocal\n\`jojo!crazydiamond\` - Déplacer tout les utilisateurs en vocal dans le salon\n\`jojo!killerqueen\` - Déplacer les utilisateurs dans un salon nommé "BTD" pour les renvoyer dans l'autre salon après quelques secondes`)
-			.addField(`:x: Commande de secours`, `\`jojo!fix\` - Fixer le problème d'action en cours`)
 			.setFooter(`Réalisé par ezzud#0001`)
 			message.channel.send(embed)
 
